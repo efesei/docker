@@ -18,7 +18,7 @@ steps:
       - '--image=gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA'
       - '--region=us-central1'
       - '--platform=managed'
-      - '--port=$PORT'
+      - '--port=${_PORT}'
       - '--allow-unauthenticated'
 
 # Store images in Google Container Registry
@@ -30,7 +30,7 @@ timeout: '1200s'
 
 # Define substitution variables
 substitutions:
-  _PORT: '8080'  # Default port, will use $PORT from container if available
+  _PORT: '8080'  # Default port
 
 # Logging configuration
 options:
