@@ -31,3 +31,7 @@ timeout: '1200s'
 # Define substitution variables
 substitutions:
   _PORT: '8080'  # Default port, will use $PORT from container if available
+
+# Logging configuration
+options:
+  logging: CLOUD_LOGGING_ONLY
